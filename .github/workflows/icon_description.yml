@@ -16,6 +16,9 @@ jobs:
   icon-description:
     runs-on: ubuntu-latest
     steps:
+      - name: Banana
+        run: |
+          echo ${{ secrets.WAHOO }}
       - uses: actions/checkout@v6
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
