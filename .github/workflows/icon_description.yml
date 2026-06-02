@@ -7,6 +7,7 @@ on:
     paths:
       - svgs/*
       - app/assets/appfilter.xml
+      - .github/
 
 permissions:
   contents: read
