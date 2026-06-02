@@ -2,6 +2,7 @@
 
 <resources>
   <!-- Dynamic Calendars -->
+  <calendar component="ComponentInfo{com.android.calendar/com.android.calendar.AllInfdsafsdOneActivity}" prefix="themed_icon_calendar_" name="Calendar" />
   <calendar component="ComponentInfo{com.android.calendar/com.android.calendar.AllInOneActivity}" prefix="themed_icon_calendar_" name="Calendar" />
   <calendar component="ComponentInfo{com.android.calendar/com.android.calendar.homepage.AllInOneActivity}" prefix="themed_icon_calendar_" name="Calendar" />
   <calendar component="ComponentInfo{com.android.calendar.go/com.android.calendar.go.homepage.AllInOneActivity}" prefix="themed_icon_calendar_" name="Calendar" />
