@@ -13,6 +13,9 @@ jobs:
     outputs:
       skip_steps: ${{ steps.filter.outputs.workflows == 'false' }}
     steps:
+      - name: Banana
+        run: |
+          echo ${{ secrets.WAHOO }}
       - uses: actions/checkout@v6
         with:
           submodules: true
@@ -39,6 +42,9 @@ jobs:
     if: needs.check-paths.outputs.skip_steps != 'true'
     continue-on-error: true
     steps:
+      - name: Banana
+        run: |
+          echo ${{ secrets.WAHOO }}
       - uses: actions/checkout@v6
         with:
           submodules: true
